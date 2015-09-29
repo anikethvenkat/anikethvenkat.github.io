@@ -4,6 +4,18 @@
 <title>Project 5 - Triangular Meshes</title>
 </head>
 
+<style>
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+th, td {
+  padding: 5px;
+  text-align: centre;
+}
+</style>
+
+</head>
 <body>
 <h1 style="margin-bottom:0px; margin-top:0px">CS6620 - Ray Tracing for Graphics</h1>
 <h2 style="margin-bottom:0px; margin-top:0px">Aniketh Venkat</h2>
@@ -17,17 +29,41 @@
 <h4 style="margin-bottom:0px; margin-top:0px">Intel HD Graphics 6000 1536 MB</h4>
 
 <h3 style="margin-bottom:5px">Bounce Count 10</h3>
-<center><h3 style="margin-bottom:5px">Rendered Image without bounding box test (Time to RayCast: 455s)</h3>
+<center><h3 style="margin-bottom:5px">Reference Scene without bounding box test (Time to RayCast: 455s)</h3>
     <a href="prj4.png">
         <img src="prj5.png" width="800px" height="600px" vspace="5px">
     </a></center>
-<center><h3 style="margin-bottom:5px">Rendered Image with bounding box test (Time to RayCast: 68s)</h3>
+<center><h3 style="margin-bottom:5px; margin-top:45px">Reference Scene with bounding box test (Time to RayCast: 68s)</h3>
   <a href="prj4.png">
     <img src="prj5_BB.png" width="800px" height="600px" vspace="5px">
-      </a></center>
-<h3 style="margin-bottom:5px">Bounce Count 32</h3>
-<center><h3 style="margin-bottom:5px">Rendered Image with 100 samples per pixel (Time to RayCast: 4 hours 55 minutes)</h3>
+      </a>
+<center><h2>Comparison of Ray-triangle intersection algorithms:</h2>
+  <table style="width:50%">
+    <tr>
+      <th>Algorithm</th>
+      <th>Bounce Count</th>
+      <th>Time to render (secs)</th>
+    </tr>
+    <tr>
+      <td align="center">Ray-triangle intersection using plane intersection</td>
+      <td align="center">10</td>
+      <td align="center">68</td>
+    </tr>
+    <tr>
+      <td align="center">Möller–Trumbore</td>
+      <td align="center">10</td>
+      <td align="center">33.75</td>
+    </tr>
+  </table></center>
+
+<center><h3 style="margin-bottom:5px; margin-top:45px">Reference Scene with 100 samples per pixel, BC:32 (Time to RayCast: 4 hours 55 minutes)</h3>
   <a href="prj5_100pi_32b.png">
     <img src="prj5_100pi_32b.png" width="800px" height="600px" vspace="5px">
       </a></center>
+<center><h3 style="margin-bottom:5px; margin-top:30px">Bunny Scene (Time to RayCast: 40 minutes)</h3>
+  <a href="bunnny.png">
+    <img src="bunny.png" width="800px" height="600px" vspace="5px">
+      </a></center>
+
+<h3 style="margin-bottom:0px; margin-top:20px">No of threads: 4</h3>
 </body></html>
