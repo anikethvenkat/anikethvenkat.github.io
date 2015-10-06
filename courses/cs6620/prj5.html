@@ -5,6 +5,18 @@
 </head>
 
 <style>
+  div {
+    background-color: white;
+    width: 1200px;
+    padding: 25px;
+    border: 25px solid white;
+    margin: 25px;
+  }
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
   table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -13,30 +25,34 @@ th, td {
   padding: 5px;
   text-align: centre;
 }
+
+p.serif {
+  font-family: serif;
+}
+
+p.sansserif {
+  font-family: Helvetica, sans-serif;
+}
+
+h3 {
+  text-align: center;
+  word-wrap: break-word;
+  font-weight:normal;
+}
 </style>
 
 </head>
 <body>
-<h1 style="margin-bottom:0px; margin-top:0px">CS6620 - Ray Tracing for Graphics</h1>
-<h2 style="margin-bottom:0px; margin-top:0px">Aniketh Venkat</h2>
-<h2>Project 5 - Triangular Meshes</h2>
-
-
-<h3 style="margin-bottom:5px">Hardware Information</h3>
-<h4 style="margin-bottom:0px; margin-top:0px">MacBook Air (11-inch, Early 2015)</h4>
-<h4 style="margin-bottom:0px; margin-top:0px">1.6 GHz Intel Core i5</h4>
-<h4 style="margin-bottom:0px; margin-top:0px">4 GB 1600 MHz DDR3</h4>
-<h4 style="margin-bottom:0px; margin-top:0px">Intel HD Graphics 6000 1536 MB</h4>
-
-<h3 style="margin-bottom:5px">Bounce Count 10</h3>
-<center><h3 style="margin-bottom:5px">Reference Scene without bounding box test (Time to RayCast: 455s)</h3>
+<h1 style="margin-left:0px; margin-bottom:-75px; margin-top:0px"><p class="sansserif">CS6620 Project 5 - Triangular Meshes</p></h1>
+<div>
+<center><h3 style="margin-bottom:0px"><p class="serif">Reference Scene without bounding box test, BC: 10 (Time to RayCast: 455s)</p></h3>
     <a href="prj4.png">
         <img src="prj5.png" width="800px" height="600px" vspace="5px">
     </a></center>
-<center><h3 style="margin-bottom:5px; margin-top:45px">Reference Scene with bounding box test (Time to RayCast: 68s)</h3>
+<center><h3 style="margin-bottom:0px; margin-top:0px"><p class="serif">Reference Scene with bounding box test, BC: 10 (Time to RayCast: 68s)</p></h3>
   <a href="prj4.png">
     <img src="prj5_BB.png" width="800px" height="600px" vspace="5px">
-      </a>
+      </a></center>
 <center><h2>Comparison of Ray-triangle intersection algorithms:</h2>
   <table style="width:50%">
     <tr>
@@ -56,17 +72,27 @@ th, td {
     </tr>
   </table></center>
 
-<center><h3 style="margin-bottom:5px; margin-top:45px">Reference Scene with 100 samples per pixel, BC:32 (Time to RayCast: 4 hours 55 minutes)</h3>
+<center><h3 style="margin-bottom:0px; margin-top:0px"><p class="serif">Reference Scene with 100 samples per pixel, BC:32 (Time to RayCast: 4 hours 55 minutes)</p></h3>
   <a href="prj5_100pi_32b.png">
     <img src="prj5_100pi_32b.png" width="800px" height="600px" vspace="5px">
       </a></center>
-<center><h3 style="margin-bottom:5px; margin-top:30px">Bunny Scene (Time to RayCast: 40 minutes)</h3>
-  <a href="bunny.png">
-    <img src="bunny.png" width="800px" height="600px" vspace="5px">
+<center><h3 style="margin-bottom:0px; margin-top:0px"><p class="serif"> Stanford Bunny from the <a href="https://graphics.stanford.edu/data/3Dscanrep//">Stanford 3D Scanning Repository</a> (Time to RayCast: 40 minutes)</p></h3>
+  <a href="green-bunny.png">
+    <img src="green-bunny.png" width="800px" height="600px" vspace="5px">
       </a></center>
-<center><h3 style="margin-bottom:5px; margin-top:30px">Dragon Scene (Time to RayCast: 5 hours 40 minutes)</h3>
-  <a href="dragon.png">
-    <img src="dragon.png" width="800px" height="600px" vspace="5px">
-      </a></center>
-<h3 style="margin-bottom:0px; margin-top:20px">No of threads: 4</h3>
+</div>
+
+<h4><p class="sansserif" style="margin-bottom:5px">Hardware Information:</p></h4>
+<p class="sansserif" style="margin-bottom:0px; margin-top:-10px">MacBook Air (11-inch, Early 2015)</p>
+<p class="sansserif" style="margin-bottom:0px; margin-top:0px">CPU: 1.6 GHz Intel Core i5, 4 threads</p>
+<p class="sansserif" style="margin-bottom:0px; margin-top:0px">RAM: 4 GB 1600 MHz DDR3</p>
+<p class="sansserif" style="margin-bottom:0px; margin-top:0px">Intel HD Graphics 6000 1536 MB</p>
+
+<p align="center" class="serif">
+<a href="prj4.html"> Previous, </a>&nbsp;
+<a href="prj6.html"> Next </a>&nbsp;
+<!--<a href="index.html">Index</a>&nbsp;-->
+</p>
+</body>
+
 </body></html>

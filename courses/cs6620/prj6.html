@@ -5,6 +5,14 @@
 </head>
 
 <style>
+  
+  div {
+    background-color: white;
+    width: 1200px;
+    padding: 25px;
+    border: 25px solid white;
+    margin: 25px;
+  }
   table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
@@ -13,28 +21,57 @@ th, td {
   padding: 5px;
   text-align: centre;
 }
+
+p.serif {
+  font-family: serif;
+}
+
+p.sansserif {
+  font-family: Helvetica, sans-serif;
+}
+
+h3 {
+  text-align: center;
+  word-wrap: break-word;
+  font-weight:normal;
+}
 </style>
 
 </head>
 <body>
-<h1 style="margin-bottom:0px; margin-top:0px">CS6620 - Ray Tracing for Graphics</h1>
-<h2 style="margin-bottom:0px; margin-top:0px">Aniketh Venkat</h2>
-<h2>Project 6 - Space Partitioning</h2>
+<h1 style="margin-left:0px; margin-bottom:-75px; margin-top:25px"><p class="sansserif">CS6620 Project 6 - Space Partitioning</p></h1>
+<div>
+<center><h3 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Model madness revisited with BVH, BC: 16, 512 samples per pixel (Time to RayCast: 2 hours, 27 minutes and 33 secs)</p></h3>
+  <a href="model madness.png">
+    <img src="model madness.png" width="800px" height="600px" vspace="5px">
+  </a></center>
+
+<h3 style="margin-left:100px; margin-right:100px; margin-bottom:5px; margin-top:10px"><p class="serif">The scene makes use of the Stanford Dragon (1,132,830 tris), Happy Buddha (1,087,716 tris), Armadillo (345,944 tris) and Bunny (69,451 tris) from the <a href="https://graphics.stanford.edu/data/3Dscanrep//">Stanford 3D Scanning Repository</a> and the ordered polymesh version of <a href="http://www.headus.com.au/samples/killeroo/">Killeroo</a> (46,000 tris).</p></h3>
 
 
-<h3 style="margin-bottom:5px">Hardware Information</h3>
-<h4 style="margin-bottom:0px; margin-top:0px">MacBook Air (11-inch, Early 2015)</h4>
-<h4 style="margin-bottom:0px; margin-top:0px">1.6 GHz Intel Core i5</h4>
-<h4 style="margin-bottom:0px; margin-top:0px">4 GB 1600 MHz DDR3</h4>
-<h4 style="margin-bottom:0px; margin-top:0px">Intel HD Graphics 6000 1536 MB</h4>
-
-<h3 style="margin-bottom:5px">Bounce Count 32, 100 Samples per pixel</h3>
-<center><h3 style="margin-bottom:5px; margin-top:30px">Bunny Scene with BVH (Time to RayCast: 27 minutes 33 secs)</h3>
-  <a href="bunny-bvh.png">
-    <img src="bunny-bvh.png" width="800px" height="600px" vspace="5px">
+<center><h3 style="margin-bottom:0px; margin-top:0px"><p class="serif">Steam Bike with BVH, BC: 16, 512 samples per pixel (Time to RayCast: 1 hour and 11 minutes 25secs)</p></h3>
+  <a href="SteamBikePro.png">
+    <img src="SteamBikePro.png" width="800px" height="600px" vspace="5px">
       </a></center>
-<center><h3 style="margin-bottom:5px; margin-top:30px">Teapot Scene with BVH (Time to RayCast: 3 minutes 25secs)</h3>
+<center><h3 style="margin-bottom:0px; margin-top:0px"><p class="serif">Teapot Scene with BVH (Time to RayCast: 3 minutes 25secs)</p></h3>
   <a href="teapot-bvh.png">
     <img src="teapot-bvh.png" width="800px" height="600px" vspace="5px">
       </a></center>
+<center><h3 style="margin-bottom:5px; margin-top:30px">Imaging showing Bounding Volume Hierarchy</h3>
+  <a href="BVH.png">
+    <img src="BVH.png" width="800px" height="600px" vspace="5px">
+      </a></center>
+</div>
+<h4><p class="sansserif" style="margin-bottom:5px">Hardware Information:</p></h4>
+  <p class="sansserif" style="margin-bottom:0px; margin-top:-10px">MacBook Air (11-inch, Early 2015)<br /></p>
+  <p class="sansserif" style="margin-bottom:0px; margin-top:0px">CPU: 1.6 GHz Intel Core i5, 16 threads<br />
+  RAM: 4 GB 1600 MHz DDR3<br/>
+  Intel HD Graphics 6000 1536 MB</p>
+
+<p align="center" class="serif">
+<a href="prj5.html"> Previous </a>&nbsp;
+<!--<a href="index.html">Index</a>&nbsp;-->
+</p>
+
+
 </body></html>
