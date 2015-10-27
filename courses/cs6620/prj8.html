@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Project 8 - Antialiasing</title>
+</head>
+
+<style>
+  
+  div {
+    background-color: white;
+    width: 1200px;
+    padding: 25px;
+    border: 25px solid white;
+    margin: 25px;
+  }
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+th, td {
+  padding: 5px;
+  text-align: centre;
+}
+
+p.serif {
+  font-family: serif;
+}
+
+p.sansserif {
+  font-family: Helvetica, sans-serif;
+}
+
+h3 {
+  text-align: center;
+  word-wrap: break-word;
+  font-weight:normal;
+}
+</style>
+
+</head>
+<body>
+<h1 style="margin-left:0px; margin-bottom:-75px; margin-top:25px"><p class="sansserif">CS6620 Project 8 - Antialiasing</p></h1>
+<div>
+<center><h3 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Random Sampling with Min Samples = 4, Max Samples = 340, BC: 10 (Time to RayCast: 874 secs)</p></h3>
+  <a href="image_random.png">
+    <img src="image_random.png" width="800px" height="600px" vspace="5px">
+  </a>
+  <a href="Random.png">
+    <img src="Random.png" width="800px" height="600px" vspace="5px">
+  </a>
+</center>
+
+<center><h3 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Halton Sequence with adaptive subdivision, Min Samples = 4, Max Samples = 340, BC: 10 (Time to RayCast: 79 secs)</p></h3>
+  <a href="image_halton.png">
+    <img src="image_halton.png" width="800px" height="600px" vspace="5px">
+  </a>
+  <a href="samplecount_halton.png">
+    <img src="samplecount_halton.png" width="800px" height="600px" vspace="5px">
+  </a>
+  <a href="Halton.png">
+    <img src="Halton.png" width="800px" height="600px" vspace="5px">
+  </a>
+</center>
+
+<center><h3 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Stratified Sampling with adaptive subdivision, Min Samples = 4, Max Samples = 340, BC: 10 (Time to RayCast: 109 secs)</p></h3>
+  <a href="image_jitter.png">
+    <img src="image_jitter.png" width="800px" height="600px" vspace="5px">
+  </a>
+<a href="samplecount_jitter.png">
+  <img src="samplecount_jitter.png" width="800px" height="600px" vspace="5px">
+    </a>
+  <a href="Stratified Sampling.png">
+    <img src="Stratified Sampling.png" width="800px" height="600px" vspace="5px">
+  </a>
+</center>
+
+<center><h3 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Halton Sequence with 3 step subdivision, Min Samples = 4, Max Samples = 256, BC: 10 (Time to RayCast: 54 secs)</p></h3>
+  <a href="image_255_3_step.png">
+    <img src="image_255_3_step.png" width="800px" height="600px" vspace="5px">
+      </a>
+  <a href="samplecount_255_3_step.png">
+    <img src="samplecount_255_3_step.png" width="800px" height="600px" vspace="5px">
+      </a>
+</center>
+
+<center><h3 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Halton Sequence with no adaptive subdivision, Min Samples = 4, Max Samples = 256, BC: 10 (Time to RayCast: 289 secs)</p></h3>
+  <a href="image_255.png">
+    <img src="image_255.png" width="800px" height="600px" vspace="5px">
+      </a>
+  <a href="samplecount_255.png">
+    <img src="samplecount_255.png" width="800px" height="600px" vspace="5px">
+      </a>
+</center>
+
+<center><h3 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Model Madness Scene with Halton Sequence and adaptive subdivision, Min Samples = 4, Max Samples = 340, BC: 10 (Time to RayCast: 24 mins)</p></h3>
+  <a href="ModelMadnessHalton.png">
+    <img src="ModelMadnessHalton.png" width="800px" height="600px" vspace="5px">
+      </a>
+  <a href="samplecount_ModelMadnessHalton.png">
+    <img src="samplecount_ModelMadnessHalton.png" width="800px" height="600px" vspace="5px">
+      </a>
+<center><h3 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Model Madness Scene with Stratified Sampling, Min Samples = 4, Max Samples = 340, BC: 10 (Time to RayCast: 56 mins)</p></h3>
+    <a href="ModelMadnessJitter.png">
+      <img src="ModelMadnessJitter.png" width="800px" height="600px" vspace="5px">
+        </a>
+    <a href="samplecount_ModelMadnessJitter.png">
+      <img src="samplecount_ModelMadnessJitter.png" width="800px" height="600px" vspace="5px">
+        </a>
+</center>
+<center><h3 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Model Madness Scene with Halton Sequence and Mitchell-Netravali reconstruction, Min Samples = 4, Max Samples = 340, BC: 10 (Time to RayCast: 24 mins)</p></h3>
+  <a href="ModelMadnessHalton_reconstruction_filter.png">
+    <img src="ModelMadnessHalton_reconstruction_filter.png" width="800px" height="600px" vspace="5px">
+      </a>
+</center>
+<center><h3 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Model Madness Scene with Halton Sequence and cubic B-Spline reconstruction, Min Samples = 4, Max Samples = 340, BC: 10 (Time to RayCast: 24 mins)</p></h3>
+  <a href="ModelMadnessHalton_reconstruction_filter_cubic_bspline.png">
+    <img src="ModelMadnessHalton_reconstruction_filter_cubic_bspline.png" width="800px" height="600px" vspace="5px">
+      </a>
+</center>
+
+
+</div>
+<h4><p class="sansserif" style="margin-bottom:5px">Hardware Information:</p></h4>
+  <p class="sansserif" style="margin-bottom:0px; margin-top:-10px">MacBook Air (11-inch, Early 2015)<br /></p>
+  <p class="sansserif" style="margin-bottom:0px; margin-top:0px">CPU: 1.6 GHz Intel Core i5, 16 threads<br />
+  RAM: 4 GB 1600 MHz DDR3<br/>
+  Intel HD Graphics 6000 1536 MB</p>
+
+<p align="center" class="serif">
+<a href="prj7.html"> Previous </a>&nbsp;
+<!--<a href="index.html">Index</a>&nbsp;-->
+</p>
+
+
+</body></html>
