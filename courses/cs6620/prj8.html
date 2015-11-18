@@ -41,16 +41,18 @@ h3 {
 <body>
 <h1 style="margin-left:0px; margin-bottom:-75px; margin-top:25px"><p class="sansserif">CS6620 Project 8 - Antialiasing</p></h1>
 <div>
-<center><h3 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Random Sampling with Min Samples = 4, Max Samples = 340, BC: 10 (Time to RayCast: 874 secs)</p></h3>
+<center><h3 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Random Sampling with Min Samples = 16, Max Samples = 340, Bounce Count: 6 (Time to RayCast: 82 secs)</p></h3>
   <a href="image_random.png">
-    <img src="image_random.png" width="800px" height="600px" vspace="5px">
+    <img src="image_random.png" width="800px" height="600px" vspace="5px"
+      onmouseover="this.src='samplecount_random.png'"
+      onmouseout="this.src='image_random.png'">
   </a>
   <a href="Random.png">
     <img src="Random.png" width="800px" height="600px" vspace="5px">
   </a>
 </center>
 
-<center><h3 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Halton Sequence with adaptive sampling, Min Samples = 4, Max Samples = 340, BC: 10 (Time to RayCast: 79 secs)</p></h3>
+<center><h3 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Halton Sequence with adaptive sampling, Min Samples = 16, Max Samples = 340, Bounce Count: 6 (Time to RayCast: 79 secs)</p></h3>
   <a href="image_halton.png">
     <img src="image_halton.png" width="800px" height="600px" vspace="5px"
       onmouseover="this.src='samplecount_halton.png'"
@@ -61,7 +63,7 @@ h3 {
   </a>
 </center>
 
-<center><h3 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Stratified Sampling with adaptive subdivision, Min Samples = 4, Max Samples = 340, BC: 10 (Time to RayCast: 109 secs)</p></h3>
+<center><h3 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Stratified Sampling with adaptive subdivision, Min Samples = 16, Max Samples = 340, Bounce Count: 6 (Time to RayCast: 296 secs)</p></h3>
   <a href="image_jitter.png">
     <img src="image_jitter.png" width="800px" height="600px" vspace="5px"
       onmouseover="this.src='samplecount_jitter.png'"
@@ -72,28 +74,13 @@ h3 {
   </a>
 </center>
 
-<center><h3 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Halton Sequence with 3 step subdivision, Min Samples = 4, Max Samples = 256, BC: 10 (Time to RayCast: 54 secs)</p></h3>
-  <a href="image_255_3_step.png">
-    <img src="image_255_3_step.png" width="800px" height="600px" vspace="5px"
-      onmouseover="this.src='samplecount_255_3_step.png'"
-      onmouseout="this.src='image_255_3_step.png'">
-  </a>
-</center>
-
-<center><h3 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Halton Sequence with no adaptive sampling, Min Samples = 4, Max Samples = 256, BC: 10 (Time to RayCast: 289 secs)</p></h3>
-  <a href="image_255.png">
-    <img src="image_255.png" width="800px" height="600px" vspace="5px" 	onmouseover="this.src='samplecount_255.png'"
-      onmouseout="this.src='image_255.png'">
-      </a>
-</center>
-
-<center><h3 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Model Madness Scene with Stratified Sequence and no reconstruction, Min Samples = 16, Max Samples = 340, BC: 10 (Time to RayCast: 44 mins)</p></h3>
+<center><h3 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Model Madness Scene with Stratified Sequence and no reconstruction, Min Samples = 16, Max Samples = 340, Bounce Count: 6 (Time to RayCast: 44 mins)</p></h3>
   <a href="ModelMadnessJitter.png">
     <img src="ModelMadnessJitter.png" width="800px" height="600px" vspace="5px">
       </a>
 </center>
 
-<center><h3 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Model Madness Scene with Stratified Sequence and 3x3 Mitchell-Netravali reconstruction, Min Samples = 16, Max Samples = 340, BC: 10 (Time to RayCast: 44 mins)</p></h3>
+<center><h3 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Model Madness Scene with Stratified Sequence and 3x3 Mitchell-Netravali reconstruction, Min Samples = 16, Max Samples = 340, Bounce Count: 6 (Time to RayCast: 44 mins)</p></h3>
   <a href="ModelMadness_Jitter_3x3_reconstruction_filter.png">
     <img src="ModelMadness_Jitter_3x3_reconstruction_filter.png" width="800px" height="600px" vspace="5px">
       </a>
