@@ -41,22 +41,17 @@ h3 {
 <body>
 <h1 style="margin-left:0px; margin-bottom:-75px; margin-top:25px"><p class="sansserif">CS6620 Project 11 - Irradiance Caching</p></h1>
 <div>
-  <center><h3 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Reference Scene with Irradiance Caching, Max AA Samples: 16, 1000 GI Rays (Time to RayCast: 23 secs)</p></h3>
+  <center><h3 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Max AA Samples: 16 compared with Max AA Samples: 64, 1000 GI Rays (Time to RayCast: 23/42 secs)</p></h3>
     <h3 style="margin-bottom:0px; margin-top:-15px"><p class="sansserif"> Threshold:- Color: 0.1, Depth: 3.0, Normal: 0.7</p></h3>
     <a href="image_irradiance_16min_0.1_3_0.7_5.png">
-      <img src="image_irradiance_16min_0.1_3_0.7_5.png" width="800px" height="600px" vspace="5px">
+      <img src="image_irradiance_16min_0.1_3_0.7_5.png" width="800px" height="600px" vspace="5px"
+        onmouseover="this.src='image_irradiance_64min_0.1_3_0.7_5.png'"
+        onmouseout="this.src='image_irradiance_16min_0.1_3_0.7_5.png'">
         </a>
     <a href="irradiance_16min_0.1_3_0.7_5.png">
-      <img src="irradiance_16min_0.1_3_0.7_5.png" width="800px" height="600px" vspace="5px">
-        </a>
-  </center>
-  <center><h3 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Max AA Samples: 64, 1000 GI Rays (Time to RayCast: 42 secs) </p></h3>
-    <h3 style="margin-bottom:0px; margin-top:-15px"><p class="sansserif"> Threshold:- Color: 0.1, Depth: 3.0, Normal: 0.7</p></h3>
-    <a href="image_irradiance_64min_0.1_3_0.7_5.png">
-      <img src="image_irradiance_64min_0.1_3_0.7_5.png" width="800px" height="600px" vspace="5px">
-        </a>
-    <a href="irradiance_64min_0.1_3_0.7_5.png">
-      <img src="irradiance_64min_0.1_3_0.7_5.png" width="800px" height="600px" vspace="5px">
+      <img src="irradiance_16min_0.1_3_0.7_5.png" width="800px" height="600px" vspace="5px"
+        onmouseover="this.src='irradiance_64min_0.1_3_0.7_5.png'"
+        onmouseout="this.src='irradiance_16min_0.1_3_0.7_5.png'">
         </a>
   </center>
 </center>
