@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Project 14 - Final Project</title>
+</head>
+
+<style>
+  
+  div {
+    text-align: justify;
+    background-color: white;
+    width: 1200px;
+    padding: 25px;
+    border: 25px solid white;
+    margin: 25px;
+  }
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+th, td {
+  padding: 5px;
+  text-align: centre;
+}
+
+p.serif {
+  font-family: serif;
+}
+
+p.sansserif {
+  font-family: Helvetica, sans-serif;
+}
+
+h3 {
+  text-align: center;
+  word-wrap: break-word;
+  font-weight:normal;
+}
+</style>
+
+</head>
+<body>
+  
+<h1 style="margin-left:0px; margin-bottom:-75px; margin-top:25px"><p class="sansserif">CS6620 Project 14 - Final Project</p></h1>
+
+<div>
+<h2 style="margin-left:-70px; margin-bottom:0px; margin-top:0px"><p align="left" class="sansserif">Teapot Rendering Competition </p></h2>
+  
+  <h3 style="margin-left:-70px; margin-bottom:0px; margin-top:0px"><p class="sansserif"> For the final project, I implemented quite a few additional features like animation, motion blur, animating caustic maps and a physically correct renderer. The scene showcases a glass Utah Teapot (model courtesy <a href="http://www.cs.utah.edu/~lediaev/courses/cs6620/"> Laura Lediaev) </a> with water crystals, animating water bubbles and caustics, multi-colored Stanford Buddha, Stanford Dragon (from the <a href="https://graphics.stanford.edu/data/3Dscanrep//">Stanford 3D Scanning Repository</a>) and a U logo (model courtesy <a href="http://www.willusher.io/"> Will Usher)</a>. Textures are from <a href="https://graphics.stanford.edu/data/3Dscanrep//">TextureX.com</a>. While the glass teapot exhibits absorption and Fresnel reflections, the diffuse objects demonstrate global illumination capabilities of the renderer.
+    The image was rendered using path tracing, importance sampling, adaptive stratified sampling and caustic photon map. Animation was captured at a rate of 10 frames per second with about 10,24 samples per pixel with 15 GI bounces.  The final image uses Mitchell-Netravali filter for reconstruction. </p>
+  </h3>
+  
+<center><h2 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Final Scene with 1,024 SPP, 15 bounces and 50,000 Caustic photons</p></h2>
+  <a href="teapot_rendering_motion_blur.png">
+    <img src="teapot_rendering_motion_blur.png" align="middle" width="1251px" height="704px" vspace="5px">
+      </a>
+</center>
+
+<center><h2 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Animation of the final scene at 10 frames per second with 1,024 SPP, 15 GI bounces and 50,000 Caustic photons</p></h2>
+<center><video class="img-responsive" src="teapot_rendering.mp4" type="video/mp4" controls
+  style="padding-top:16px;padding-bottom:16px;" poster="teapot_rendering_frame1.png">
+</video>
+</center>
+
+</div>
+<h2><p class="sansserif" style="margin-bottom:5px">Hardware Information:</p></h2>
+<h3 style="margin-left:-20px; margin-bottom:0px; margin-top:0px"><p class="sansserif"> I ran my ray tracer on 8x Xeon(R) CPU E-7-4870 with 160 hyper threads and 4x Xeon E7-8890 v3 with 144 hyper threads for over 36 hours to render the final scene. I modified my raytracer to support distributed rendering that allowed me to use many different compute nodes and render multiple animation frames in parallel. </p>
+</h3>
+</div>
+
+<p align="center" class="serif">
+<a href="prj13.html"> Previous </a>&nbsp;
+<!--<a href="index.html">Index</a>&nbsp;-->
+</p>
+
+
+</body></html>
