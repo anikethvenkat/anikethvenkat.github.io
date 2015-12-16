@@ -47,10 +47,10 @@ h3 {
 <h2 style="margin-left:-70px; margin-bottom:0px; margin-top:0px"><p align="left" class="sansserif">Teapot Rendering Competition </p></h2>
   
   <h3 style="margin-left:-70px; margin-bottom:0px; margin-top:0px"><p class="sansserif"> For the final project, I implemented quite a few additional features like animation, motion blur, animating caustic maps and a physically correct renderer. The scene showcases a glass Utah Teapot (model courtesy <a href="http://www.cs.utah.edu/~lediaev/courses/cs6620/"> Laura Lediaev) </a> with water crystals, animating water bubbles and caustics, multi-colored Stanford Buddha, Stanford Dragon (from the <a href="https://graphics.stanford.edu/data/3Dscanrep//">Stanford 3D Scanning Repository</a>) and a U logo (model courtesy <a href="http://www.willusher.io/"> Will Usher)</a>. Textures are from <a href="https://graphics.stanford.edu/data/3Dscanrep//">TextureX.com</a>. While the glass teapot exhibits absorption and Fresnel reflections, the diffuse objects demonstrate global illumination capabilities of the renderer.
-    The image was rendered using path tracing, importance sampling, adaptive stratified sampling and caustic photon map. Animation was captured at a rate of 10 frames per second with about 10,24 samples per pixel with 15 GI bounces.  The final image uses Mitchell-Netravali filter for reconstruction. </p>
+    The image was rendered using path tracing, importance sampling, adaptive stratified sampling and caustic photon map. Animation was captured at a rate of 10 frames per second with about 1,024 samples per pixel with 15 GI bounces.  The final image uses Mitchell-Netravali filter for reconstruction. </p>
   </h3>
   
-<center><h2 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Final Scene with 1,024 SPP, 15 bounces and 50,000 Caustic photons</p></h2>
+<center><h2 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Final Scene with 1,024 SPP, 15 GI bounces and 50,000 Caustic photons</p></h2>
   <a href="teapot_rendering_motion_blur.png">
     <img src="teapot_rendering_motion_blur.png" align="middle" width="1251px" height="704px" vspace="5px">
       </a>
