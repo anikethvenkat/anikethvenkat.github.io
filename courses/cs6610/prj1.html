@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Project 1 - Shader based Geometry and Lighting</title>
+</head>
+
+<style>
+  div 
+  {
+    text-align: justify;
+    background-color: white;
+    width: 1200px;
+    padding: 25px;
+    border: 25px solid white;
+    margin: 25px;
+  }
+  table, th, td 
+  {
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align: centre;
+  }
+  th, td 
+  {
+    padding: 5px;
+    text-align: centre;
+  }
+
+  p.serif 
+  {
+    font-family: serif;
+  }
+
+  p.sansserif 
+  {
+    font-family: Helvetica, sans-serif;
+  }
+
+  h3 
+  {
+    text-align: left;
+    word-wrap: break-word;
+   font-weight:normal;
+  }
+</style>
+
+</head>
+<body>
+<h1 style="margin-left:0px; margin-bottom:-75px; margin-top:25px"><p class="sansserif">CS6610 Project 1- Shader based Geometry and Lighting</p></h1>
+
+<div>
+  <h3 style="margin-left:-70px; margin-bottom:0px; margin-top:0px"><p class="sansserif"> Project 1 required us to render a simple scene composed of a room, a cube placed at the centre of the room and a sphere placed on top of the cube.  I used <a href="https://github.com/openglsuperbible/sb7code">  superbible 7 objects </a>  to create my scene and in addition I also added support to load obj files using <a href="https://github.com/syoyo/tinyobjloader">  tinyObjLoader</a>. The program supports per vertex, per fragment shading, single color, multi colored objects, camera movement using arcball mouse interactions and face culling to see the objects inside the room. It took me about 4 hours to complete the assignment where in I spent most of the time getting a clean openGL environment setup and fixing compilation issues on OSX . I'm statically linking to <a href="https://github.com/glfw/glfw">  glfw3 </a> for windowing,  and <a href="https://github.com/g-truc/glm">  libglm </a>  for math computations.
+  </h3>
+  
+<center><h2 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Scene with color attrib and per vertex Phong shading</p></h2>
+  <a href="VertexColorAttrib_Per_Vertex_Shading_Zoomed_In.png">
+    <img src="VertexColorAttrib_Per_Vertex_Shading_Zoomed_In.png" width="511px" height="531px" vspace="5px">
+      </a>
+</center>
+
+<center><h2 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Scene with single color and per fragment Phong shading</p></h2>
+  <a href="One_Color_Per_Fragment_Shading.png">
+    <img src="One_Color_Per_Fragment_Shading.png" width="507px" height="528px" vspace="5px">
+      </a>
+</center>
+
+
+<h2>Keyboard Controls:</h2>
+  <table style="width:100%">
+    <tr >
+      <th align="middle"> Key</th>
+      <th align="middle">Operation</th>
+    </tr>
+    <tr>
+      <td align="center">'v'</td>
+      <td align="center">Switch between per vertex to per fragment Phong shading</td>
+    </tr>
+    <tr>
+      <td align="center">'c'</td>
+      <td align="center">Switch between single and multi color modes</td>
+    </tr>
+    <tr>
+      <td align="center">'m'</td>
+      <td align="center">Switch between color vertex attrib and color generated in the shader</td>
+    </tr>
+    <tr>
+      <td align="center">'r'</td>
+      <td align="center">Reset camera position</td>
+    </tr>
+  </table></center>
+
+  <h2>Mouse Controls:</h2>
+  <table style="width:100%">
+    <tr >
+      <th align="middle"> Button</th>
+      <th align="middle">Operation</th>
+    </tr>
+    <tr>
+      <td align="center">'Left'</td>
+      <td align="center">Rotate the camera</td>
+    </tr>
+    <tr>
+      <td align="center">'Right'</td>
+      <td align="center">Pan</td>
+    </tr>
+    <tr>
+      <td align="center">'Shift+Right'</td>
+      <td align="center">Zoom in/out</td>
+    </tr>
+  </table></center>
+
+<center><h2 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Video showing mouse interactions, various color and shading modes</p></h2>
+<center><video class="img-responsive" src="Project 1.mov" type="video/mov" controls
+  style="padding-top:16px;padding-bottom:16px;" poster="Project 1.mov">
+</video>
+</center>
+
+</div>
+<h2><p class="sansserif" style="margin-bottom:5px">Learnings</p></h2>
+<h3 style="margin-left:0px; margin-bottom:0px; margin-top:0px"><p class="sansserif"> <li>glfw3 windowing setup</li>  <li>How to generate and use vertex arrays (glGenVertexArrays) and </li> <li> How to use glDrawArraysInstanced.</li></p>
+</h3>
+</div>
+
+</div>
+<h2><p class="sansserif" style="margin-bottom:5px">How to run the program?</p></h2>
+<h3 style="margin-left:0px; margin-bottom:0px; margin-top:0px"><p class="sansserif"> Run build.sh to compile the code and run.sh to run the program.</p>
+</h3>
+</div>
+</body></html>
