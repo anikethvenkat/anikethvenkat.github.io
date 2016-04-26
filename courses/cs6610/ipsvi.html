@@ -47,13 +47,19 @@
   </head>
   <body>
   <center><h1 style="margin-left:0px; margin-bottom:-75px; margin-top:25px">
-    <p class="sansserif">CS6610 Final Project - Image Plane Sweep Volume Illumination</p></h1></center>
+    <p class="sansserif">Image Plane Sweep Volume Illumination</p></h1></center>
   
   <div>
-  <center><h2 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">What to expect?</p></h2>
+    <p> <h3> The paper discusses a novel sweep based volumetric illumination technique that integrates advanced volume illumination into a standard ray casting based volume renderer. While slice based volume renderer's can compute global illumination by convoluting the contribution from previous slices, they are known to be tightly bound to the slice based rendering paradigm and require a rather large number of slices to achieve a high quality result. Until IPSVI, no interactive illumination technique was proposed which directly integrated global illumination technique into an  ray-casting based volume renderer. </h3></p>
+    
+    <p> <h3> The key to solving a global illumination problem in a volume render is to effectively deal with the  synchronization problem inherent to advanced volume illumination i.e. samples scattering light onto the current sample need to be computed beforehand. Supporting the desired synchronization directly within a volume ray-caster is more demanding, since we do not have a unique ray-front as is the case with slice-based volume rendering. The algorithm in the paper proposes a line sweep paradigm to solve this inherent synchronization issue.</h3></p>
+<p> <h3>
+Firstly, it is important to determine the sweep direction along which the rays should be marched (horizontal/vertical) to ensure that the ray-casting is synchronized such that the parts of the volume being closer to the light source are processed earlier, than those being further away from it. This can be easily obtained by transforming the light position to image space and finding the nearest screen border which acts as a start point for triggering the ray march. Then a set of lines are drawn starting from the screen border that generates an illumination cache at each stage which is later used to compute  global illumination.</h3></p>
+  <center>
     <a href="penguin.png">
     <img src="penguin.png" width="781px" height="376px" vspace="5px">
     </a>
+    <p class="sansserif"> CT scan of a penguin (512 × 512 × 1146 voxels) rendered using image plane sweep volume illumination</p>
   </center>
   
   <center>
@@ -87,6 +93,12 @@
           </td>
       </tr>
     </table></center>
+    
+  <center>
+    <a href="Implementation Details.png">
+    <img src="Implementation Details.png" width="508px" height="520px" vspace="5px">
+    </a>
+  </center>
     
     <center><h2 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Priliminary Results</p></h2>
       <table style="width:100%">
