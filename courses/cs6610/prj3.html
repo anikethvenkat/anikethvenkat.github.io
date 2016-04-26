@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<title>Project 3 - Shader based Shadow Algorithms </title>
+</head>
+
+<style>
+  div 
+  {
+    text-align: justify;
+    background-color: white;
+    width: 1200px;
+    padding: 25px;
+    border: 25px solid white;
+    margin: 25px;
+  }
+  table, th, td 
+  {
+    border: 2px solid black;
+    border-collapse: collapse;
+    text-align: centre;
+  }
+  th, td 
+  {
+    padding: 5px;
+    text-align: centre;
+  }
+
+  p.serif 
+  {
+    font-family: serif;
+  }
+
+  p.sansserif 
+  {
+    font-family: Helvetica, sans-serif;
+  }
+
+  h3 
+  {
+    text-align: left;
+    word-wrap: break-word;
+   font-weight:normal;
+  }
+</style>
+
+</head>
+<body>
+<h1 style="margin-left:0px; margin-bottom:-75px; margin-top:25px"><p class="sansserif">CS6610 Project 3- Shader based Shadow Algorithms</p></h1>
+
+<div>
+  <h3 style="margin-left:-70px; margin-bottom:0px; margin-top:0px"><p class="sansserif"> Project 3 required us to render a scene composed of a room, a textured floor, a cube placed in the centre of the room with a teapot on it sized such that it casts shadow on the walls and the floor. We implemented, Projective shadows, Shadow maps and Shadow Volumes in this assignment. For shadow volumes, I have used a triangle occluder as shown in the image. 
+  </h3>
+  
+<center><h2 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Scene with Projective Shadows</p></h2>
+  <a href="prj3_1.png">
+    <img src="prj3_1.png" width="513px" height="530px" vspace="5px">
+      </a>
+</center>
+
+<center><h2 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Scene with Shadow Mapping</p></h2>
+  <a href="prj3_2.png">
+    <img src="prj3_2.png" width="509px" height="529px" vspace="5px">
+      </a>
+</center>
+
+<center><h2 style="margin-bottom:0px; margin-top:0px"><p class="sansserif">Scene with Shadow Volume</p></h2>
+  <a href="prj3_3.png">
+    <img src="prj3_3.png" width="509px" height="529px" vspace="5px">
+      </a>
+</center>
+
+
+<h2>Keyboard Controls:</h2>
+  <table style="width:100%">
+    <tr >
+      <th align="middle"> Key</th>
+      <th align="middle">Operation</th>
+    </tr>
+    <tr>
+      <td align="center">'W/E'</td>
+      <td align="center">Move Light in and out of the screen</td>
+    </tr>
+    <tr>
+      <td align="center">'P'</td>
+      <td align="center">Projective Shadows</td>
+    </tr>
+    <tr>
+      <td align="center">'M'</td>
+      <td align="center">Shadow Mapping</td>
+    </tr>
+    <tr>
+      <td align="center">'V'</td>
+      <td align="center">Shadow Volume</td>
+    </tr>
+    <tr>
+      <td align="center">'r'</td>
+      <td align="center">Reset camera position</td>
+    </tr>
+        <tr>
+      <td align="center">'s'</td>
+      <td align="center">Start/Stop scene rotation</td>
+    </tr>
+    <tr>
+      <td align="center">'u'</td>
+      <td align="center">Toggle 2D/ MipMap modes</td>
+    </tr>
+    <tr>
+      <td align="center">'t'</td>
+      <td align="center">Toggle Linear/Nearest filtering for 2D mode</td>
+    </tr>
+    <tr>
+      <td align="center">'y'</td>
+      <td align="center">Toggle Linear/Nearest filtering for MipMap mode</td>    
+      <tr>
+      <td align="center">'a'</td>
+      <td align="center">Increase/decrease alpha blending on reflective sphere</td>                   
+    </tr>
+  </table></center>
+
+  <h2>Mouse Controls:</h2>
+  <table style="width:100%">
+    <tr >
+      <th align="middle"> Button</th>
+      <th align="middle">Operation</th>
+    </tr>
+    <tr>
+      <td align="center">'Left'</td>
+      <td align="center">Rotate the camera</td>
+    </tr>
+    <tr>
+      <td align="center">'Right'</td>
+      <td align="center">Pan</td>
+    </tr>
+    <tr>
+      <td align="center">'Shift+Right'</td>
+      <td align="center">Zoom in/out</td>
+    </tr>
+  </table></center>
+
+</div>
+<h2><p class="sansserif" style="margin-bottom:5px">How to run the program?</p></h2>
+<h3 style="margin-left:0px; margin-bottom:0px; margin-top:0px"><p class="sansserif"> Run build.sh to compile the code and run.sh to run the program.</p>
+</h3>
+</div>
+</body></html>
